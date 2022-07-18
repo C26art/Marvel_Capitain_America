@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitain America</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="./css/swiper.min.css"/>
+    <link rel="stylesheet" href="./css/america.css">   
+</head>
+<body id="capa">
+    <div id="america">
+        <header id="header">
+            <a href="#" class="logo"><img src="./img/logo.png" width="140px" height="140px"></a>
+            <div id="toggle"></div>
+            <div id="navbar">
+                <ul>
+                    <li><a href="american.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="#comics">Comics</a></li>
+                </ul>
+            </div>
+            
+        </header>
+        <div class="banner">
+            <div class="content">
+                <h2><span></span>Spartan <span>Universal</span> Soldier</h2>                
+                <div class="slide"></div>
+                    <ul class="sci">
+                        <li data-text="Facebook"><a href="#" class="facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </a></li>
+                        <li data-text="Twitter"><a href="#" class="twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i>
+                        </a></li>
+                        <li data-text="Instagram"><a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i>
+                        </li>
+                    </ul> 
+                 </div>
+            </div>
+        <div class="play">
+            <img src="./img/play.png"><span>Play Vídeo</span>
+        </div>
+    </div>
+
+    <section id="#home">Home</section>
+    <section id="about">About</section>
+    <section id="movies">Movies</section>
+    <section id="comics">Comics</section>
+
+   
+    <script src="./js/vanila.tilt.min.js"></script>
+    <script>       
+
+
+	VanillaTilt.init(document.querySelectorAll(".sci li a"), {
+		max: 30,
+		speed: 400,
+        glare: true,
+        "max-glare": 1,
+
+	});
+
+
+        const header = document.getElementById('header');
+        const toggle = document.getElementById('toggle');
+        const navbar = document.getElementById('navbar');
+
+        document.onclick = function(e){
+            if(e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar'){
+                toggle.classList.remove('active');
+                navbar.classList.remove('active');
+            }
+        }
+
+        toggle.onclick = function(){
+            toggle.classList.toggle('active');
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
